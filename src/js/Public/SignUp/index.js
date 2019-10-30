@@ -7,7 +7,23 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+import {SignUp} from './../../services/firebase';
+
 function SignUp() {
+  const[name, setName]
+
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    SignUp(email, password)
+    .then(()=>{
+      console.log('Usuario autenticado');
+    })
+    .catch(err=>{
+      console.log('Ocurrió un error');
+    })
+  }
+
   return (
       <Container component="main" maxWidth="xs" className="signup">
 
